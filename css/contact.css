@@ -1,0 +1,142 @@
+.inner-main-area .contactFormWrap {
+  padding-left: 8%;
+  padding-top: 8%; }
+  .inner-main-area .contactFormWrap .leftWrap .contact .nameWrap h1 {
+    font-size: 120%; }
+
+@font-face {
+  font-family: 'MontserratRegular';
+  font-weight: 100;
+  src: url(../fonts/Montserrat-Regular.ttf); }
+@font-face {
+  font-family: 'MontserratBold';
+  font-weight: 300;
+  src: url(../fonts/Montserrat-Bold.ttf); }
+.small-wrapper {
+  width: 700px; }
+
+.about-text ul li .contact {
+  padding-bottom: 20px;
+  clear: both; }
+  .about-text ul li .contact .nameWrap h1 {
+    font-size: 140%;
+    text-align: left;
+    font-family: MontserratRegular;
+    text-transform: uppercase; }
+  .about-text ul li .contact #addressAlign {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  .about-text ul li .contact .titleWrap h1 {
+    font-size: 120%;
+    text-align: left; }
+    @media screen and (min-width: 100px) and (max-width: 480px) {
+      .about-text ul li .contact .titleWrap h1 {
+        font-size: 120%;
+        margin-top: 10px; } }
+  .about-text ul li .contact .emailWrap {
+    padding-top: 10px; }
+    .about-text ul li .contact .emailWrap h2 {
+      font-size: 95%;
+      text-align: left;
+      font-family: MontserratRegular;
+      text-transform: uppercase;
+      margin-top: 0px;
+      margin-bottom: 2px;
+      letter-spacing: 1px; }
+  .about-text ul li .contact .phoneWrap h2 {
+    font-size: 95%;
+    text-align: left;
+    font-family: MontserratRegular;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 2px;
+    letter-spacing: 1px; }
+
+.contactForm h1 {
+  font-family: MontserratRegular !important;
+  padding-top: 0px;
+  font-size: 200%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  text-align: left; }
+.contactForm p {
+  text-align: left; }
+.contactForm form input {
+  background-color: transparent;
+  margin-bottom: 15px;
+  border: 2px solid #666666;
+  border-radius: 3px;
+  font-size: 80%;
+  padding-left: 10px;
+  color: black;
+  padding-top: 3px; }
+  .contactForm form input::-webkit-input-placeholder {
+    color: black; }
+  .contactForm form input::-moz-placeholder {
+    color: black; }
+  .contactForm form input:-moz-placeholder {
+    color: black; }
+  .contactForm form input:-ms-input-placeholder {
+    color: black; }
+.contactForm form #fNameWidth {
+  width: 16rem; }
+.contactForm form #lNameWidth {
+  width: 17rem; }
+.contactForm form #emailWidth {
+  width: 38rem; }
+.contactForm form #subjectWidth {
+  width: 38rem; }
+.contactForm form #messageSize {
+  width: 38rem;
+  height: 7rem;
+  border: 2px solid #666666;
+  background-color: transparent;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 75%; }
+  .contactForm form #messageSize::-webkit-input-placeholder {
+    color: black; }
+  .contactForm form #messageSize::-moz-placeholder {
+    color: black; }
+  .contactForm form #messageSize:-moz-placeholder {
+    color: black; }
+  .contactForm form #messageSize:-ms-input-placeholder {
+    color: black; }
+.contactForm form #submitWidth {
+  width: 8rem;
+  height: 3.5rem;
+  text-transform: uppercase;
+  font-size: 80%;
+  padding-left: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+iframe {
+  width: 50rem;
+  height: 70rem;
+  border: none;
+  float: left; }
+
+#triangleLogoAlign {
+  position: absolute;
+  top: 2%;
+  right: 4%;
+  width: auto;
+  height: 33px; }
+
+#brandWrapContact {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+#locationMap {
+  width: 300px;
+  height: 300px;
+  padding-bottom: 20px; }
+
+/*# sourceMappingURL=contact.css.map */

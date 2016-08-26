@@ -1,0 +1,34 @@
+@import "bourbon/bourbon";
+
+#triangleLogoAlign {
+	position: absolute;
+	top: 2%;
+	right: 4%;
+	width: auto;
+	height: 33px;
+} 
+
+.inner-main-area {
+	height: 100vh;
+}
+.about-area{
+	h2{
+		background: url("../img/line.jpg") no-repeat scroll center 98px rgba(0, 0, 0, 0) !important;
+		color: #000000;
+		font-size: 72px;
+		padding: 0 0 8px;
+		text-align: center;
+		line-height: 100px;
+	}
+	
+}
+
+.about-text {
+	ul{
+		@include display(flex);
+		@include justify-content(center);
+		li{
+			margin-right: 0px;
+		}
+	}
+}

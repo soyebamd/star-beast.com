@@ -1,0 +1,730 @@
+@import "base/index";
+@import "layout/index";
+@import "components/index";
+@import "bourbon/bourbon";
+
+body{
+	margin: 0px;
+	ul {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+	a{
+		text-decoration: none;
+		color:black;
+	}
+}
+
+.jumboTron {
+	.jumboTronWrap{
+		background-image: url(../img/starbeast-bg-new.jpg);
+		background-size: cover;
+		background-position: center;
+		@include display(flex);
+		@include flex-direction(column);
+		height: 62rem;
+		@media screen and (min-width: 100px) and (max-width: 480px){
+			height: 35rem;
+			background-position-x: 48%;
+			background-position-y: 63%;
+			background-size: 235% auto;
+		}
+		@media screen and (min-width: 481px) and (max-width: 750px){
+			height: 25rem;
+		}
+		.iconWrap{
+			@include display(flex);
+			@include justify-content(center);
+			padding-top: 9%;
+			padding-bottom: 1%;
+			@media screen and (min-width: 481px) and (max-width: 750px){
+				padding-top: 2rem;
+			}
+			img{
+				width: auto;
+				height: 6rem;
+				@media screen and (min-width: 100px) and (max-width: 750px){
+					height: 3rem;
+				}
+			}
+			@media screen and (min-width: 2000px){
+				padding-top:5%;
+			}
+		}
+		.navWrap{
+			@include display(flex);
+			@include justify-content(center);
+			ul{
+				@include display(flex);
+  				@include justify-content(space-around);
+				width: 28rem;
+				@media screen and (min-width: 100px) and (max-width: 480px){
+					@include display(flex);
+					@include justify-content(center);
+					@include flex-direction(column);
+				}
+				li{
+					@media screen and (min-width: 100px) and (max-width: 750px){
+						@include display(flex);
+						@include justify-content(center);
+						padding-bottom: 5px;
+					}
+					a{
+						font-family: MontserratRegular, sans-serif;
+						text-transform: uppercase;
+						color: white;
+					}
+				}
+			}
+		}
+		.logoWrap{
+			@include display(flex);
+			@include justify-content(center);
+			.logo{
+				padding-bottom: 5%;
+				padding-top: 4%;
+				img{
+					height: auto;
+					width: 42rem;
+					@media screen and (min-width: 100px) and (max-width: 750px){
+						height: auto;
+						width: 23rem;
+					}
+				}
+			}
+		}
+		.scrollArea{
+			.scrollAreaWrap{
+				.mouse{
+					@include display(flex);
+					@include justify-content(center);
+					padding-bottom: 1%;
+					img{
+						width: auto;
+						height: 45px;
+					}	
+				}
+				.navDots {
+					@include display(flex);
+					@include flex-direction(column);
+					text-align: center;
+					i {
+						color: white;
+						font-size: 80%;
+						padding-bottom: 1%;
+						&:nth-child(2){
+							font-size: 70%;
+						}
+						&:nth-child(3){
+							font-size: 9px;
+						}
+						&:nth-child(4){
+							font-size: 7px;
+						}
+						&:nth-child(5){
+							font-size: 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.search {
+	@include display(flex);
+	@include justify-content(center);
+	.searchWrap{
+		width: 95%;
+		max-width: 110rem;
+		@include display(flex);
+		@include justify-content(flex-end);
+		padding-bottom: 18px;
+		.searchInnerWrap{
+			padding-top: 2rem;
+			form{
+				input{
+					border: none;
+					line-height: 30px;
+					@include placeholder{
+						font-family: MontserratRegular, sans-serif;
+						text-transform: uppercase;
+						font-size: 130%;
+						text-align: right;
+						color: black;
+						letter-spacing: 1px;
+					}
+				}
+				i {
+					font-size: 160%;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+hr { 
+	display: block; 
+	height: 1px;
+    border: 0; 
+    border-top: 1px solid #ccc;
+}
+
+.breadcrumbs {
+	@include display(flex);
+	@include justify-content(center);
+	.breadCrumbWrap{
+		width: 89%;
+		max-width: 110rem;
+		.breadCrumb{
+			ul {
+				margin-bottom: 5px;
+				margin-top: 23px;
+				@include display(flex);
+				@media screen and (min-width: 100px) and (max-width: 510px){
+					@include flex-direction(column);	
+				}
+				li {
+					padding-right:5px;						
+
+					a {
+						font-family: MontserratRegular, sans-serif;
+						text-transform: uppercase;
+						font-size: 90%;
+						cursor: default;
+						@media screen and (min-width: 100px) and (max-width: 750px){
+							font-size: 90%;
+						}
+						&:hover {
+							color: #ea0d8d;
+						}
+					}
+					.active {
+						color: #ea0d8d;
+					}
+				}
+			}
+		}
+	}
+}
+
+.portfolio {
+	@include display(flex);
+	@include justify-content(center);
+	min-height: 40rem;
+	.portfolioWrap {
+		width: 95%;
+		max-width: 111rem;
+		ul{
+			li{
+				.portfolioImageWrap{
+					position: relative;
+					overflow: hidden;
+					.image{
+					}
+					.gradientBg {
+						width: 100%;
+						height: 20rem;
+						position: absolute;
+						top: 5rem;
+						background: -moz-linear-gradient(top,  rgba(0,0,0,0) 34%, rgba(0,0,0,0.5) 67%, rgba(38,38,38,1) 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(34%,rgba(0,0,0,0)), color-stop(67%,rgba(0,0,0,0.5)), color-stop(100%,rgba(38,38,38,1))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 34%,rgba(0,0,0,0.5) 67%,rgba(38,38,38,1) 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  rgba(0,0,0,0) 34%,rgba(0,0,0,0.5) 67%,rgba(38,38,38,1) 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  rgba(0,0,0,0) 34%,rgba(0,0,0,0.5) 67%,rgba(38,38,38,1) 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  rgba(0,0,0,0) 34%,rgba(0,0,0,0.5) 67%,rgba(38,38,38,1) 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#262626',GradientType=0 ); /* IE6-9 */
+						@media screen and (min-width: 100px) and (max-width: 480px){
+							top: 8rem;
+						}
+						@media screen and (min-width: 481px) and (max-width: 750px){
+							top: 0rem;
+						}
+					}
+					.slideOverlay{
+						position: absolute;
+						top: 24rem;
+						@media screen and (min-width: 100px) and (max-width: 480px){
+							top: 27rem;
+						}
+						@media screen and (min-width: 481px) and (max-width: 750px){
+							top: 22rem;
+						}
+						img{
+							height: 20rem;
+							width: 100%;
+						}
+						.slideOverlayItems{
+							position: absolute;
+							top: 3rem;
+							left: 0%;
+							text-align: center;
+							width: 100%;
+							@media screen and (min-width: 481px) and (max-width: 638px){
+								top: 0.7rem;
+							}
+							@media screen and (min-width: 639px) and (max-width: 750px){
+								top: 3rem;
+							}
+							@media screen and (min-width: 751px) and (max-width: 849px){
+								  top: 2rem;
+							}
+							@media screen and (min-width: 850px) and (max-width: 1169px){
+								top: 0rem;
+							}
+
+							@media screen and (min-width: 1180px) and (max-width: 1292px){
+								top: 0rem;
+							}
+							h1{
+								font-family: MontserratRegular;
+								text-transform: uppercase;
+								color: rgb(229, 229, 229);
+								font-size: 120%;
+								letter-spacing: 3px;
+								margin-bottom: 0rem;
+								@media screen and (min-width: 100px) and (max-width: 480px){
+									font-size: 90%;
+								}
+								@media screen and (min-width: 481px) and (max-width: 750px){
+									font-size: 90%;
+								}
+								@media screen and (min-width: 751px) and (max-width: 849px){
+									font-size: 90%;
+								}
+								@media screen and (min-width: 850px) and (max-width: 1024px){
+									font-size: 65%;
+								}
+								@media screen and (min-width: 1025px) and (max-width: 1169px){
+									font-size: 65%;
+								}
+								@media screen and (min-width: 1170px){
+									font-size: 90%;
+								}
+							}
+							img {
+								width: auto !important;
+								height: 2px;
+								display: initial !important;
+								@media screen and (min-width: 850px) and (max-width: 1024px){
+									display: none !important;
+								}
+							}
+							.widthAdjust{
+
+							}
+							h2 {
+								font-family: MontserratRegular;
+								text-transform: uppercase;
+								color: rgb(229, 229, 229);
+								letter-spacing: 4px;
+								font-size: 184%;
+								text-align: center;
+								@media screen and (min-width: 100px) and (max-width: 480px){
+									font-size: 110%;
+									margin-top: 9px;
+									margin-bottom: 9px;
+								}
+								@media screen and (min-width: 481px) and (max-width: 750px){
+									font-size: 120%;
+									margin-top: 7px;
+								}
+								@media screen and (min-width: 751px) and (max-width: 849px){
+									font-size: 140%;
+									margin-top: 7px;
+								}
+								@media screen and (min-width: 850px) and (max-width: 1024px){
+									font-size: 100%;
+								}
+								@media screen and (min-width: 1025px) and (max-width: 1169px){
+									font-size: 110%;
+								}
+								@media screen and (min-width: 1170px) and (max-width: 1599px){
+									font-size: 160%;
+									max-width: 18rem;
+									margin: 0 auto;
+									padding-top: 10px;
+								}
+							}
+							p {
+								font-family: MontserratRegular;
+								color: rgb(229, 229, 229);
+								letter-spacing: 1px;
+								margin: 0 auto;
+								font-size: 90%;
+								max-width: 12rem;
+							}
+							.miniMenu {
+								width: auto;
+								height: 29px;
+								float: right;
+								padding-right: 2rem;
+							}
+						}
+					}
+					.label {
+						position: absolute;
+						bottom: 7%;
+						left: 5%;
+						@media screen and (min-width: 100px) and (max-width: 480px){
+							bottom: 0%;
+							left: 3%;
+						}
+
+						@media screen and (min-width: 481px) and (max-width: 508px){
+							bottom: 3%;
+						}
+
+						@media screen and (min-width: 508px) and (max-width: 540px){
+							bottom: 7%;
+						}
+
+						@media screen and (min-width: 541px) and (max-width: 566px){
+							bottom: 12%;
+						}
+
+						@media screen and (min-width: 567px) and (max-width: 590px){
+							bottom: 14%;
+						}
+
+						@media screen and (min-width: 591px) and (max-width: 621px){
+							bottom: 19%;
+						}
+
+						@media screen and (min-width: 622px) and (max-width: 639px){
+							bottom: 23%;
+						}
+
+						@media screen and (min-width: 640px) and (max-width: 680px){
+							bottom: 4%;
+						} 
+
+						@media screen and (min-width: 681px) and (max-width: 701px){
+							bottom: 6%;
+						} 
+
+						@media screen and (min-width: 716px) and (max-width: 732px){
+							bottom: 9%;
+						}
+
+						@media screen and (min-width: 733px) and (max-width: 750px){
+							bottom: 10%;
+						}
+
+						@media screen and (min-width: 751px) and (max-width: 767px){
+							bottom: 15%;
+						}
+
+						@media screen and (min-width: 768px) and (max-width: 785px){
+							bottom: 1%;
+						}
+
+						@media screen and (min-width: 786px) and (max-width: 806px){
+							bottom: 2%;
+						}
+
+						@media screen and (min-width: 807px) and (max-width: 816px){
+							bottom: 3%;
+						}
+
+						@media screen and (min-width: 850px) and (max-width: 903px){
+							bottom: 1%;
+						}
+
+						@media screen and (min-width: 904px) and (max-width: 938px){
+							bottom: 3%;
+						}
+
+						@media screen and (min-width: 939px) and (max-width: 974px){
+							bottom: 7%;
+						}
+
+						@media screen and (min-width: 975px) and (max-width: 1024px){
+							bottom: 13%;
+						}
+
+						@media screen and (min-width: 1025px) and (max-width: 1060px){
+							bottom: -1%; 
+						}
+
+						@media screen and (min-width: 1061px) and (max-width: 1100px){
+							bottom: 2%; 
+						}
+
+						@media screen and (min-width: 1101px) and (max-width: 1119px){
+							bottom: 5%;
+						}
+
+						@media screen and (min-width: 1120px) and (max-width: 1149px){
+							bottom: 7%;
+						}
+
+						@media screen and (min-width: 1151px) and (max-width: 1165px){
+							bottom: 8%;
+						}
+
+						@media screen and (min-width: 1166px) and (max-width: 1179px){
+							bottom: 9%;
+						}
+
+						@media screen and (min-width: 1180px) and (max-width: 1288px){
+							bottom: 3%;
+						}
+
+						@media screen and (min-width: 1289px) and (max-width: 1319px){
+							bottom: 5%;
+						}
+
+						@media screen and (min-width: 1320px) and (max-width: 1399px){
+							bottom: 1%;
+						}
+						
+						@media screen and (min-width: 1400px) and (max-width: 1499px){
+							bottom: 3%;
+						}
+
+						@media screen and (min-width: 1500px) and (max-width: 1540px){
+							bottom: 5%;	
+						}
+
+						@media screen and (min-width: 1541px) and (max-width: 1599px){
+							bottom: 9%;
+						}
+
+						@media screen and (min-width: 1600px) and (max-width: 1687px){
+							bottom: 1%;
+						}
+
+						@media screen and (min-width: 1688px) and (max-width: 1699px){
+							bottom: 1%;
+						}
+
+						@media screen and (min-width: 1699px) and (max-width: 1750px){
+							bottom: 4%;
+						}
+
+						@media screen and (min-width: 1751px) and (max-width: 1809px){
+							bottom: 2%;
+						}
+
+						@media screen and (min-width: 1810px) and (max-width: 1848px){
+							bottom: 3%;
+						}
+
+						@media screen and (min-width: 1849px) and (max-width: 3000px){
+							bottom: 4%;
+						}
+						h2{
+							font-family: MontserratRegular, sans-serif;
+							text-transform: uppercase;
+							letter-spacing: 2px;
+							color: rgb(237, 237, 237);
+							margin-bottom: 0px;
+							font-size: 136%;
+						}
+						h3{
+							font-family: MontserratRegular, sans-serif;
+							text-transform: uppercase;
+							font-size: 65%;
+							letter-spacing: 1px;
+							color: rgb(237, 237, 237);
+							margin-top: 4px;
+						}
+						a{
+							font-family: MontserratRegular, sans-serif;
+							text-transform: uppercase;
+							display: none;
+						}
+					}
+					&:hover .label {
+						@include transform(translateX(-19rem));
+						@include transition(all .7s ease-in-out);
+					}
+					&:hover .slideOverlay{
+						@include transform(translateY(-18rem));
+						@include transition(all .5s ease-in-out);
+					}
+					&:hover .smallOverlay{
+						@include transform(translateY(-20rem));
+						@include transition(all .5s ease-in-out);
+					}
+
+					&:hover .smallLabel{
+						@include transform(translateX(-26rem));
+						@include transition(all .6s ease-in-out);
+					}
+				}
+			}
+			li:nth-child(2) {
+				.slideOverlayItems{
+					h2{
+						max-width: 21rem;								
+						font-family: MontserratRegular;
+						text-transform: uppercase;
+						color: rgb(229, 229, 229);
+						letter-spacing: 4px;
+						font-size: 184%;
+						text-align: center;
+						margin: 0 auto;
+						padding-top: 10px;
+						@media screen and (min-width: 100px) and (max-width: 480px){
+							font-size: 110%;
+							margin-top: 9px;
+							margin-bottom: 9px;
+						}
+						@media screen and (min-width: 481px) and (max-width: 750px){
+							font-size: 120%;
+							margin-top: 7px;
+						}
+						@media screen and (min-width: 751px) and (max-width: 849px){
+							font-size: 140%;
+							margin-top: 7px;
+						}
+						@media screen and (min-width: 850px) and (max-width: 1024px){
+							font-size: 100%;
+						}
+						@media screen and (min-width: 1025px) and (max-width: 1169px){
+							font-size: 110%;
+						}
+						@media screen and (min-width: 1170px) and (max-width: 1599px){
+							font-size: 130% !important;
+							max-width: 18rem;
+							margin: 0 auto;
+							padding-top: 10px;
+						}
+					}
+				}
+			}			
+			li:nth-child(9) {
+				.slideOverlayItems{
+					h2{
+						max-width: 21rem;								
+						font-family: MontserratRegular;
+						text-transform: uppercase;
+						color: rgb(229, 229, 229);
+						letter-spacing: 4px;
+						font-size: 184%;
+						text-align: center;
+						margin: 0 auto;
+						padding-top: 10px;
+						@media screen and (min-width: 100px) and (max-width: 480px){
+							font-size: 110%;
+							margin-top: 9px;
+							margin-bottom: 9px;
+						}
+						@media screen and (min-width: 481px) and (max-width: 750px){
+							font-size: 120%;
+							margin-top: 7px;
+						}
+						@media screen and (min-width: 751px) and (max-width: 849px){
+							font-size: 140%;
+							margin-top: 7px;
+						}
+						@media screen and (min-width: 850px) and (max-width: 1024px){
+							font-size: 100%;
+						}
+						@media screen and (min-width: 1025px) and (max-width: 1169px){
+							font-size: 110%;
+						}
+						@media screen and (min-width: 1170px) and (max-width: 1599px){
+							font-size: 130% !important;
+							max-width: 18rem;
+							margin: 0 auto;
+							padding-top: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	@include display(flex);
+	@include justify-content(center);
+	padding-bottom: 5rem;
+	padding-top: 3rem;
+	.footerWrap{
+		width: 95%;
+		@include display(flex);
+		@include justify-content(space-between);
+		@media screen and (min-width: 100px) and (max-width:480px){
+			@include justify-content(center);
+			@include flex-direction(column);
+		}
+		.leftFooterBrandWrap{
+			@include display(flex);
+			@include justify-content(center);
+			@media screen and (min-width: 100px) and (max-width: 480px){
+				@include order(2);
+				padding-top: 16px;
+			}
+			img{
+				width: auto;
+				height: 43px;
+			}
+			p{
+				font-family: MontserratRegular;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+		}
+		.centerFooterTopWrap{
+			@media screen and (min-width: 100px) and (max-width: 480px){
+				padding-bottom: 25px;
+				@include display(flex);
+				@include justify-content(center);
+				@include order(1);
+			}
+
+			i{
+				border: 2px solid black;
+				border-radius: 30px;
+			}
+
+		}
+		.rightFooterSocialWrap{
+			@include display(flex);
+			@include align-items(center);
+				@media screen and (min-width: 100px) and (max-width: 480px){
+					@include order(3);
+					padding-top: 39px;
+				}
+			.rightFooterSocialInnerWrap{
+				width: 13rem;
+				@include display(flex);
+				@include justify-content(space-between);
+				@media screen and (min-width: 100px) and (max-width: 480px){
+					width: 100%;
+					@include justify-content(space-around);
+					@include order(3);
+				}
+				i{
+					font-size: 19px;
+				}
+			}
+		}
+	}
+}
+
+// Misc CSS to fix misc stylesheets
+#posts .mix{
+	display: none;
+}
+
+.fancybox-prev {
+	left: -21rem !important;
+}
+
+.fancybox-next {
+	left: 51rem;
+} 
+
+
+
+
+
+
+

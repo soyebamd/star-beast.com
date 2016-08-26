@@ -1877,3 +1877,11 @@ footer {
 
 
 .bx-prev{ left:5%!important;}
+
+#features-video{
+  background-color: #000; 
+  text-align: center;
+
+}
+
+.image{ height: 291px; overflow: hidden; }
